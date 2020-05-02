@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <title>Operating Systems | BrainGym2.0</title>
+    <link rel="icon" href="{{ url_for('static',    filename='icon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/os.css') }}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600&family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   {% extends "index.html" %}
+   {% block content %}
+    <header class="main">
+      <h2>//Operating Systems Course Links//</h2>
+      <p>
+        Here you can have access to all the links of websites and videos which
+        will help you in learning Operating Systems better and help improve your
+        skills
+      </p>
+    </header>
+    <div class="gallery" id="gallery">
+      <header class="gallery-head">
+        <h2>Click for Links</h2>
+        <a
+          href="https://www.youtube.com/watch?v=bkSWJJZNgf8&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p"
+        >
+          <li>Youtube</li></a
+        >
+        <a href="https://www.geeksforgeeks.org/operating-systems/">
+          <li>GeeksforGeeks</li></a
+        >
+        <a href="https://www.codechef.com/problems/IOPC13C">
+          <li>Codechef</li></a
+        >
+        <a href="https://www.tutorialspoint.com/operating_system/index.htm">
+          <li>TutorialsPoint</li></a
+        >
+        <a
+          href="https://books.google.co.in/books?id=s0MUQn7cxA4C&printsec=frontcover&dq=os+book+pdf&hl=en&sa=X&ved=0ahUKEwj67s70lpLpAhUKxDgGHSHoCPMQ6AEIPzAD#v=onepage&q=os%20book%20pdf&f=false"
+        >
+          <li>Operating Systems Books</li></a
+        >
+      </header>
+      <img class="gallery1" src="{{ url_for('static', filename='youtube.jpg') }}" alt="1" />
+      <img class="gallery2" src="{{ url_for('static', filename='geeks.png') }}" alt="2" />
+      <img class="gallery3" src="{{ url_for('static', filename='codechef.jpeg') }}" alt="4" />
+      <img class="gallery4" src="{{ url_for('static', filename='tutorialpoint.jpg') }}" alt="3" />
+    </div>
+   {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <title>Java | BrainGym2.0</title>
+    <link rel="icon" href="/pics/icon.ico" />
+    <link rel="stylesheet" href="{{ url_for('static',    filename='icon.ico') }}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600&family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   {% extends "index.html" %}
+    {% block content %}
+    <header class="main">
+      <h2>//Java Course Links//</h2>
+      <p>
+        Here you can have access to all the links of websites and videos which
+        will help you in learning Java better and help improve your skills
+      </p>
+    </header>
+    <div class="gallery" id="gallery">
+      <header class="gallery-head">
+        <h2>Click for Links</h2>
+        <a
+          href="https://www.youtube.com/watch?v=r59xYe3Vyks&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al"
+        >
+          <li>Youtube</li></a
+        >
+        <a
+          href="https://www.youtube.com/watch?v=r59xYe3Vyks&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al"
+        >
+          <li>GeeksforGeeks</li></a
+        >
+        <a
+          href="https://www.youtube.com/watch?v=r59xYe3Vyks&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al"
+        >
+          <li>Codechef</li></a
+        >
+        <a href="https://www.tutorialspoint.com/java8/index.htm">
+          <li>TutorialsPoint</li></a
+        >
+        <a
+          href="https://books.google.co.in/books?id=mgFkDwAAQBAJ&printsec=frontcover&dq=java+book+pdf&hl=en&sa=X&ved=0ahUKEwjm3vLWlpLpAhXPwzgGHQbKB1IQ6AEIUzAF#v=onepage&q=java%20book%20pdf&f=false"
+        >
+          <li>Java Books</li></a
+        >
+      </header>
+     <img class="gallery1" src="{{ url_for('static', filename='youtube.jpg') }}" alt="1" />
+      <img class="gallery2" src="{{ url_for('static', filename='geeks.png') }}" alt="2" />
+      <img class="gallery3" src="{{ url_for('static', filename='codechef.jpeg') }}" alt="4" />
+      <img class="gallery4" src="{{ url_for('static', filename='tutorialpoint.jpg') }}" alt="3" />
+    </div>
+    {% endblock %}
+  </body>
+</html>

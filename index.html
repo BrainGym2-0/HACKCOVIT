@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="In this difficult time of lockdown we can't replace human interaction with gadegts, but we are trying to provide the closet solution for our students"
+    />
+    <meta name="robots" content="index,follow" />
+    <title>BrainGym2.0 | EducationHub</title>
+    <link rel="icon" href="{{ url_for('static', filename= 'icon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600&family=Merienda:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header id="home" class="main">
+      <nav>
+        <h2 id="logo">BrainGym2.0</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <h3>
+          Are you a C.S.E student looking for a place to find all your
+          resourses? Then, BrainGym2.0 is the perfect place for you.
+        </h3>
+        <button><a href="#courses">Browse Courses</a></button>
+      </section>
+    </header>
+    <section id="about">
+      <div class="about-img">
+        <img src="{{url_for('static', filename='not today.jpeg')}}" alt="Not Today" />
+      </div>
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+            Inspired from various attractive student learning websites, we decided to create our very own website for CSE students.
+            During these tough time, we know everyone is trying to keep things as normal as they can. to do our bit we are launching this website for students doing engineering in any year.
+        </p>
+        <p>
+            The goal of this website is to give the students as much exposure and knowelege. We are aware that this lockdown can't replace the human interaction. Especially the one with a teacher and student.
+            The main objective of this website is to provide all knowledge on these three subjects- DSA, JAVA and OS
+        </p>
+        <p>
+            It contains notes, videos, pdf etc for students to study.
+        </p>
+        <h3>Objectives</h3>
+        <ol>
+          <li>
+            To build an user-friendly global online platform to help parents find free resources appropriate for their children's needs.
+          </li>
+          <li>
+            To create a website that makes learning more interesting and easy for the students during this pandemic situation.
+          </li>
+          <li>
+            To provide supplementary videos, e-books or articles and course modules to the students in order to provide tthem with sufficient knowledge required in the course selected by them.
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section id="courses">
+        <header class="course-head">
+            <h2>Courses Offered</h2>
+            <h3>//Here you can find all your resources and excel in your academics//</h3>
+          </header>
+        <div class="cards">
+            <div class="card">
+              <div class="card-icon">
+                <h5>Java</h5>
+              </div>
+              <p>Java is among the most popular programming languages out there because of its versatality and compatibility. Java can also be used for a large number of things, including software development, mobile applications, and large systems development. </br>
+                So let's make learning easy and interesting!!
+                </p>
+                <a href="{{ url_for('java') }}">Click Here!</a>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <h5>Data Structures and Algorithms</h5>
+              </div>
+              <p>The first encounter with data structures and algorithms can feel intimidating and complex for a beginner. But in today's world every good programmer needs to have a good understanding of data structures and algorithms because every piece of software processes, handles and displays data.</p>
+              <a href="{{ url_for('dsa') }}">Click Here!</a>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <h5>Operating System</h5>
+              </div>
+              <p>An operating system manages computer hardware and software resources and provides common services for computer programs. Operating system has more importance for the all computer system because a computers is lifeless without using the operating system as it allows the interface for interacting between the users.</p>
+              <a href="{{ url_for('os') }}">Click Here!</a>
+            </div>
+    </section>
+    <section id="contact">
+        <div class="form">
+            <header class="form-head">
+              <h2>Contact Us</h2>
+              <p>Mail us your doubts</p>
+              <form action="https://formspree.io/mnqgakrn" method="POST">
+                <div class="name">
+                  <label for="name">Name:</label>
+                  <input id="name" type="text" name="name" required />
+                </div>
+                <div class="email">
+                  <label for="email">E-mail:</label>
+                  <input id="email" type="email" name="_replyto" required />
+                </div>
+                <button type="submit" value="send">Submit</button>
+              </form>
+            </header>
+          </div>
+    </section>
+    <footer>
+        <div class="footer-sec">
+          <h5>BrainGym2.0 &copy;</h5>
+          <ul>
+            <li>
+              <a href="#" title="instagram-link"
+                ><img src="{{url_for('static', filename='instagram.svg')}}" alt="instagram-social-media"
+              /></a>
+            </li>
+            <li>
+              <a href="#" title="twitter-link"
+                ><img src="{{url_for('static', filename='twitter.svg')}}" alt="twitter-social-media"
+              /></a>
+            </li>
+            <li>
+              <a href="#" title="youtube-link"
+                ><img src="{{url_for('static', filename='youtube.svg')}}" alt="youtube-social-media"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
