@@ -1,0 +1,274 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.6rem;
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+h2 {
+  font-size: 4.8rem;
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+  font-family: "Karma", serif;
+  font-weight: 400;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Karma", serif;
+  font-weight: 400;
+}
+button {
+  padding: 2rem 6rem;
+  background: rgb(51, 48, 48);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+button:hover {
+  background: black;
+  font-size: 2rem;
+}
+
+/* nav-section */
+
+.main {
+  background: black;
+  color: white;
+  position: relative;
+}
+nav {
+  min-height: 10vh;
+  background: black;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0rem;
+  z-index: 3;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 40rem;
+  list-style: none;
+}
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Merienda", cursive;
+  font-size: 3rem;
+}
+.hero {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.5), transparent),
+  url({{ url_for('static', filename='mainbg.jpg') }});
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 60%;
+  padding: 3.5rem;
+  margin: 3rem;
+}
+
+/* about-section*/
+
+#about {
+  display: flex;
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+}
+.about-img {
+  min-height: 100vh;
+}
+.about-text {
+  padding: 5rem;
+  background: linear-gradient(rgba(218, 113, 15, 0.5), white);
+}
+.about-text h2 {
+  text-align: center;
+}
+.about-text p {
+  padding: 1rem;
+}
+.about-text ol {
+  padding: 1rem;
+}
+.about-text li {
+  padding: 1rem;
+}
+
+/* courses-section */
+
+.course-head {
+  background: rgb(51, 48, 48);
+  color: white;
+  padding: 3rem;
+  min-height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.course-head h2 {
+  padding: 1rem;
+}
+.course-head h3 {
+  padding: 1rem;
+}
+#courses {
+  min-height: 100vh;
+}
+.cards {
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.card h5 {
+  color: white;
+}
+.card h5,
+.card p {
+  padding: 2rem;
+}
+.card a {
+  color: rgb(80, 67, 67);
+  font-size: 2rem;
+}
+.card-icon {
+  background-color: rgb(51, 48, 48);
+}
+
+/* contact section */
+
+#contact {
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.2), transparent),
+    url({{ url_for('static', filename='contact.jpg') }});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  background: rgba(19, 28, 39, 0.8);
+  color: white;
+  width: 60%;
+  border-radius: 20px;
+}
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+.form-head p {
+  padding: 1rem;
+}
+.name,
+.email {
+  padding: 3rem;
+}
+.form-head label {
+  padding: 0rem 3rem;
+}
+.form-head input {
+  padding: 1rem;
+}
+.form button {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* foot-section */
+
+.footer-sec {
+  text-align: center;
+  color: white;
+  background: rgba(51, 48, 48, 1);
+  text-decoration: none;
+  padding: 2rem;
+}
+.footer-sec ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 932px) {
+  .main {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  nav h2,
+  .nav ul li {
+    padding: 1rem;
+  }
+  #about {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    width: 80%;
+  }
+}
